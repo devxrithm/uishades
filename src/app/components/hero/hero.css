@@ -1,0 +1,127 @@
+.hero{
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=caf5f8&c2=ffffff&gt=r&gd=dcc
+*/
+    background: rgba(202, 245, 248, 1.0);
+    background: radial-gradient(at center, rgba(202, 245, 248, 1.0), rgba(255, 255, 255, 1.0));
+    padding-top: 10rem;
+}
+
+.main-head{
+    font-size: 4vmax;
+    font-weight: bold;
+}
+.main-para{
+    font-size: 1.9vmax;
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-box{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding-top: 3rem;
+    grid-template-columns: repeat(10, 0fr);
+}
+
+.boxes{
+    /* border: 1px solid; */
+    padding: 2.8rem 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    text-align: center;
+}
+
+.boxes:hover{
+    scale: 0.9;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.conatiner-boxes1{
+    background-color: #92cace;
+}
+.conatiner-boxes2{
+    background-color: #5faab1;
+}
+.conatiner-boxes3{
+    background-color: #438e96;
+}
+.conatiner-boxes4{
+    background-color: #3b757f;
+}
+.conatiner-boxes5{
+    background-color: #356169;
+}
+.conatiner-boxes6{
+    background-color: #325158;
+}
+.conatiner-boxes7{
+    background-color: #2d464c;
+}
+.conatiner-boxes8{
+    background-color: #1a2c32;
+}
+
+.insideBtn{
+    border: 1px solid black;
+    padding: .8rem 1.8rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btn-hero1{
+    background-color: black;
+    color: white;
+    padding: .8rem 2.4rem;
+}
+
+.btn-main-hero{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 4rem;
+    align-items: center;
+}
+
+
+/* *****************responsive *********************** */
+
+@media only screen and (max-width: 600px) {
+
+    .boxes{
+        /* border: 1px solid; */
+        padding: 1rem 1rem; 
+        width: 20rem;
+    }
+    .container-box{
+        grid-template-columns: repeat(1, 0fr);
+    }
+    .hero-container{
+        padding: 0rem 1rem;  
+    }
+    .main-head{
+        width: 90%;
+    }
+
+    .btn-main-hero{
+        flex-direction: column;
+        padding: 0 1rem;
+        
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px)  {
+    .container-box{
+        grid-template-columns: repeat(4, 0fr);
+    }
+  }

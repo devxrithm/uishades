@@ -1,0 +1,50 @@
+.nav{
+    display: flex;
+    justify-content: space-around;    
+    overflow: hidden;
+    position: fixed; 
+    width: 100%;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(25px);
+    height: 5rem;
+    
+}
+.navbar{
+    color: black;
+    font-weight: 500;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.btn{
+    padding: 0.7rem 1.5rem;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: 1px solid black;
+    color: black;
+}
+
+.btn:hover{
+    scale: 0.9;
+    transition: all 0.5s;
+}
+
+.logo{
+    color: black;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px){
+    .list{
+        display: none;
+    }
+}

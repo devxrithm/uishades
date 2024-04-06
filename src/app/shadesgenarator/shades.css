@@ -1,0 +1,10 @@
+.shades-grid:hover{
+    scale: 0.9;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.shade-x{
+    padding-top: 10rem;
+    
+}
