@@ -22,7 +22,7 @@ function rgbToHex(rgb) {
 }
 
 function ShadeGenerator() {
-  const [baseColor, setBaseColor] = useState('#00ff00'); // Initial base color
+  const [baseColor, setBaseColor] = useState('#00ffbf'); // Initial base color
 
   const handleBaseColorChange = (event) => {
     setBaseColor(event.target.value);
@@ -50,32 +50,44 @@ function ShadeGenerator() {
 
   return (
     <div className='shade-x'>
-      <h1>Shade Generator</h1>
-      <div>
-        <label htmlFor="baseColor">Base Color:</label>
-        <input
-          type="color"
-          id="baseColor"
-          value={baseColor}
-          onChange={handleBaseColorChange}
-        />
+      <h1 style={{ textAlign: "center", fontSize: "4vmax", fontWeight: "bold" }}>Shade Generator</h1>
+      <h2 style={{ textAlign: "center", }}>Create Color shades by
+        pick color button and get multiple of tint and shades cards</h2>
+
+      <div className='select-color'>
+        <label htmlFor="baseColor" style={{ fontSize: "1.5rem", fontWeight: "600", }}>Base Color<br />
+        </label>
+
+        <div className='input-color'>
+          <input
+            type="color"
+            id="baseColor"
+            value={baseColor}
+            onChange={handleBaseColorChange}
+          />
+          <p style={{ color: "white" }}>{baseColor}</p>
+        </div>
+
       </div>
+
       <div>
-        <h2>Shades:</h2>
-        <div style={{display: "grid", gridTemplateColumns: "repeat(5, 0fr)" }}>
+
+        <div className="shades-boxes">
           {shades.map((shade, index) => (
-            <div
-              key={index}
-              style={{
-                width: '100px',
-                height: '50px',
-                backgroundColor: shade.color,
-                margin: '5px',
-                border: '1px solid #000',
-              }}
-            >
-              {shade.name} - {shade.color}
-            </div>
+            
+              <div
+                key={index}
+                style={{
+                  padding: "3.5vmax 1vmax",
+                  backgroundColor: shade.color,
+                  borderRadius: "5px",
+                  textAlign: "center",
+                  boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"
+                }}
+              >
+                {shade.color}
+              </div>
+
           ))}
         </div>
       </div>
