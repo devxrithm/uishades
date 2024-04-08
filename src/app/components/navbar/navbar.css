@@ -41,10 +41,17 @@
 .logo{
     color: black;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 600px){
     .list{
         display: none;
+    }
+    .nav{
+       justify-content: center; 
+    }
+    .logo{
+        font-size: 2rem;
     }
 }

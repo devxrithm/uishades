@@ -35,6 +35,7 @@
 
 import React from 'react'
 import "./hero.css"
+import Link from 'next/link'
 
 const hero = () => {
     return (
@@ -85,8 +86,8 @@ const hero = () => {
                 </div>
                 {/* <input type="color" id="colorpicker" value="#0000ff"></input> */}
                 <div className="btn-main-hero">
-                    <button className="btn-hero1 insideBtn">Explore Shades</button>
-                    <button className="btn-hero2 insideBtn">Shades Genarator</button>
+                    <Link href="/ui-shades"><button className="btn-hero1 insideBtn">Explore Shades</button></Link>
+                    <Link href="/shadesgenarator"><button className="btn-hero2 insideBtn">Shades Genarator</button></Link>
                 </div>
             </div>
         </>

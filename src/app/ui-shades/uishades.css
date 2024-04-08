@@ -1,0 +1,26 @@
+.shades-box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.shades-box{
+    width: 7vmax;
+    height: 8vmax;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px){
+    .shades-box-main{
+       flex-direction: column;
+    }
+    .shades-box{
+        height: 6.5vmax;
+        width: 22rem;
+    }
+}
